@@ -1,0 +1,36 @@
+<div class="container">
+    <p class="h2 text-center mt-4">Photo Update</p>
+    <div class="row mt-4 ">
+       <div class="col-md-4 mx-auto">
+          <div class="myform form ">
+            <form method="post" action="/photos/update" enctype="multipart/form-data">
+               <div class="form-group mt-2">
+                  <h2 class="text-center">ID</h2>
+                  <input type="text" name="id"  class="form-control" id="id" value="<%=foto.id%>" required="required">
+               </div>
+               <div class="form-group mt-2">
+                  <h2 class="text-center">Title</h2>
+                  <input type="text" name="title"  class="form-control" id="title" value="<%=foto.titulo%>" required="required">
+               </div>
+               <div class="form-group mt-2">
+                  <h2 class="text-center">Decription</h2>
+                  <input type="text" name="description"  class="form-control" id="description" value="<%=foto.descripcion%>" required="required">
+               </div>
+               <div class="form-group mt-2">
+                  <h2 class="text-center">Number</h2>
+                  <input type="number" min="0" max="10" step="0.1" name="rate" id="rate"  class="form-control" value="<%=foto.calificacion%>" required="required">
+               </div>
+               <div class="form-group mt-2 text-center">
+                  <h2>Route</h2>
+                  <input type="text" disabled name="ruta"  class="form-control" id="ruta" value="<%=foto.ruta%>" required="required">
+                     
+                  <input type="file" name="route" id="route" placeholder="selecione un archivo" accept=".png" required="required" />
+               </div>
+               <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-primary">Update</button>
+               </div>
+             </form>
+          </div>
+       </div>
+    </div>
+</div> 
